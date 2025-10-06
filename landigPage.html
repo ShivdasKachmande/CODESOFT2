@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroLaunch - Modern Landing Page</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for 'Inter' */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb; /* Light background for overall page */
+        }
+        
+        /* Custom wave background for the Hero section */
+        .hero-wave {
+            background: linear-gradient(to top, #ffffff 0%, #ffffff 50%, #1e40af 50%, #1e40af 100%);
+            background: linear-gradient(to bottom, #1e40af 0%, #1e40af 80%, #f7f9fb 80%, #f7f9fb 100%);
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        .cta-button {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(30, 64, 175, 0.4);
+        }
+
+        /* Responsive styling for the main container */
+        .main-container {
+            max-width: 1280px;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Navigation Bar -->
+    <header class="sticky top-0 z-10 bg-white shadow-md">
+        <nav class="main-container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <!-- Inline SVG for Logo Icon -->
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 10.5L21 3m-4.5 0h4.5v4.5M3 10.5h4.5V6m0 4.5l-7.5-7.5m7.5 7.5l-7.5 7.5M10.5 13.5l-4.5 4.5"></path></svg>
+                <span class="text-2xl font-bold text-gray-900">Astro<span class="text-blue-600">Launch</span></span>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">Features</a>
+                <a href="#pricing" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">Pricing</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">About Us</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">Contact</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#" class="hidden md:block px-5 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition duration-150 font-semibold cta-button">
+                Get Started
+            </a>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition duration-150">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-wave pt-24 pb-32 md:pt-32 md:pb-48 text-white">
+        <div class="main-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                Launch Your Vision into the <span class="text-yellow-300">Digital Sky</span>
+            </h1>
+            <p class="text-xl sm:text-2xl mb-10 max-w-3xl mx-auto text-blue-100">
+                The ultimate platform for modern developers to deploy, scale, and monitor applications with zero friction.
+            </p>
+            <a href="#" class="inline-block px-10 py-4 text-lg font-bold text-blue-800 bg-yellow-300 rounded-xl shadow-xl hover:bg-yellow-400 transition duration-300 cta-button">
+                Start Your Free Trial
+            </a>
+            <p class="mt-4 text-sm text-blue-200">No credit card required. Cancel anytime.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 -mt-24 md:-mt-36">
+        <div class="main-container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">Core Features</h2>
+            <p class="text-lg text-gray-500 text-center mb-12 max-w-2xl mx-auto">
+                Everything you need to go from idea to launch in minutes, not months.
+            </p>
+
+            <!-- Responsive 3-Column Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <!-- Icon: Rocket -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 4.5l-4.5 4.5m0 0l-4.5-4.5m4.5 4.5V21m0-12l4.5 4.5m-4.5-4.5V3m0 0h4.5v4.5"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Instant Deployment</h3>
+                    <p class="text-gray-500">Launch your code directly from Git with our seamless continuous integration pipeline. Go live in seconds.</p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-yellow-500 hover:shadow-xl transition duration-300">
+                    <div class="text-yellow-500 mb-4">
+                        <!-- Icon: Scale -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-5m5 0h5a2 2 0 00-2-2h-3m-12 2l-5-5a2 2 0 01-2-2V8a2 2 0 012-2h12a2 2 0 012 2v3m-5 5H7"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Automatic Scaling</h3>
+                    <p class="text-gray-500">Handle traffic spikes effortlessly. Our infrastructure auto-scales your application based on real-time demand.</p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-500 hover:shadow-xl transition duration-300">
+                    <div class="text-green-500 mb-4">
+                        <!-- Icon: Chart -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Real-time Metrics</h3>
+                    <p class="text-gray-500">Gain deep insights into your application's performance with comprehensive, minute-by-minute analytics and logging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial / Secondary CTA Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="main-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto p-8 bg-white rounded-xl shadow-2xl">
+                <blockquote class="text-xl italic font-light text-gray-700 mb-6">
+                    "AstroLaunch cut our deployment time by 90%. It's incredibly stable, fast, and the developer experience is second to none. We wouldn't go back."
+                </blockquote>
+                <div class="flex items-center justify-center space-x-3">
+                    <img class="w-12 h-12 rounded-full object-cover" 
+                         src="https://placehold.co/100x100/3b82f6/ffffff?text=JD" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b82f6/ffffff?text=JD';" 
+                         alt="Avatar of Jane Doe">
+                    <div>
+                        <p class="font-semibold text-gray-900">Jane Doe, CEO</p>
+                        <p class="text-sm text-blue-500">Innovate Digital Solutions</p>
+                    </div>
+                </div>
+                
+                <a href="#" class="mt-8 inline-block px-8 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-xl hover:bg-blue-700 transition duration-300 cta-button">
+                    Join the 10,000+ Happy Customers
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="main-container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Footer Columns (Grid Layout) -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-700 pb-8 mb-8">
+                
+                <!-- Company Info -->
+                <div class="col-span-2 md:col-span-2">
+                    <h4 class="text-2xl font-bold mb-3 text-blue-400">AstroLaunch</h4>
+                    <p class="text-gray-400 text-sm max-w-sm">
+                        Leading the future of cloud deployment with simple, powerful, and scalable solutions for every team.
+                    </p>
+                </div>
+
+                <!-- Product Links -->
+                <div>
+                    <h5 class="font-semibold mb-4 text-gray-200">Product</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-150">Features</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-150">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-150">Documentation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Links -->
+                <div>
+                    <h5 class="font-semibold mb-4 text-gray-200">Company</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-150">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-150">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-150">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div>
+                    <h5 class="font-semibold mb-4 text-gray-200">Legal</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-150">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-150">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-gray-500 text-sm">
+                &copy; 2024 AstroLaunch Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
